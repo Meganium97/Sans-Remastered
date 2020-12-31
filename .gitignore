@@ -1,0 +1,5 @@
+*.bak
+__pycache__/
+token.json
+recoverytoken
+token.old
