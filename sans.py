@@ -121,7 +121,6 @@ async def current(ctx):
     )
     
     await ctx.send(embed=embed)
-bot.run(token)
 
 # General fun stuff
 
@@ -129,3 +128,4 @@ bot.run(token)
 async def bean(ctx, u: discord.Member):
     '''BEAN!!!'''
     await ctx.send(f"{u.mention} Get Beaned!!!")
+bot.run(token)
