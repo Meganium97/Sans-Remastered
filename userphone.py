@@ -35,6 +35,7 @@ with open(home_path + "/token.json") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
+    bot.channel = bot.get_channel(ID)
 
 # userphone shit. Hardcoded. You can change that.
 
