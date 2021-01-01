@@ -35,13 +35,13 @@ with open(home_path + "/token.json") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
-    bot.channel = bot.get_channel(ID)
+    bot.channel = bot.get_channel(770100020736688128 # put output channel here)
 
 # userphone shit. Hardcoded. You can change that.
 
 @bot.event
 async def on_message(message):
-    if message.channel.id in (794603732947042337, 770100020736688128):
+    if message.channel.id in (794603732947042337 # put input channel here):
         
         webhooks = await bot.channel.webhooks()
         if len(webhooks) == 0:
