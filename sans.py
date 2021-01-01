@@ -35,3 +35,11 @@ with open(home_path + "/token.json") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
+
+# now onto the actual commands
+
+@bot.command()
+@commands.has_any_role('Owner', 'Staff', 'Admin', 'Sans Contributor')
+async def update(ctx):
+    await ctx.send("Updating code. The bot will be down for a few seconds, if this doesnt break the code.")
+    subprocess.run(['bash', home_path + '/update.sh'])
