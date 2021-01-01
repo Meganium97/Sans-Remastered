@@ -35,3 +35,16 @@ with open(home_path + "/token.json") as tokenfile:
 async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
+
+# userphone shit. Hardcoded. You can change that.
+
+@bot.event
+async def on_message(message):
+    if message.channel.id in (794603732947042337, 770100020736688128):
+        
+        webhooks = await bot.channel.webhooks()
+        if len(webhooks) == 0:
+            webhook = await bot.channel.create_webhook(name="Receiving Webhook")
+        else:
+            webhook = webhooks[0]
+        await webhook.send(message.content, embeds=message.embeds, username=message.author.display_name, avatar_url=str(message.author.avatar_url))     
