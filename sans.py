@@ -53,3 +53,4 @@ async def on_message(message):
 async def bean(ctx, u: discord.Member):
     '''BEAN!!!'''
     await ctx.send(f"{u.mention} Get Beaned!!!")
+bot.run(token)
