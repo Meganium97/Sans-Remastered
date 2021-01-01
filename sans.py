@@ -48,3 +48,8 @@ async def on_message(message):
         else:
             webhook = webhooks[0]
         await webhook.send(message.content, embeds=message.embeds, username=message.author.display_name, avatar_url=str(message.author.avatar_url))     
+
+@bot.command()
+async def bean(ctx, u: discord.Member):
+    '''BEAN!!!'''
+    await ctx.send(f"{u.mention} Get Beaned!!!")
