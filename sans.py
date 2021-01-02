@@ -36,7 +36,68 @@ async def on_ready():
     print('Ready.')
     print(f'We have logged in as {bot.user}')
 
+# If you want to be recognised, put your name in
+
+@bot.group()
+async def contributors(ctx):
+    '''Links contributors to the code'''
+    if ctx.invoked_subcommand is None:
+        await ctx.send('Which one? Current or old?')
+        
+@contributors.command()
+async def current(ctx):
+    '''Lists currect Sans contributors'''
+    embed = discord.Embed(
+        title="List of current Sans contributors",
+        description=cleandoc("""
+            Meganium97 (Dire) - Current leading coder
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
+@contributors.command()
+async def old(ctx):
+    '''Lists the old Sans contributors'''
+    embed = discord.Embed(
+        title="List of old Sans contributors",
+        description=cleandoc("""
+            Lazr1026 - Creator and programmer
+            476MHz (Radeon) - Programmer
+            Uwuham - Not very much, he makes commits sometimes
+            Techmuse - PR'd useful shit
+            Gnome! - Cleaned everything up massively
+            ItsPizzaTime1501 - Helped with proper licensing
+            bleck9999 - Fixed Gnomes mistakes
+            Maretu (ray) - Fixed our terrible grammar
+            Meganium97 (Dire) - Idk, what are you asking me for?
+            Glazed_Belmont - Fixed the paths not being universal
+        """)
+    )
+    
+    await ctx.send(embed=embed)
+
 # now onto the actual commands
+
+@bot.command()
+async def snas(ctx):
+    '''fortnite battle royale'''
+    await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
+
+@bot.command()
+async def sans(ctx):
+    '''Links the github repo for Sans'''
+    embed = make_embed(
+        title="Sans",
+        author="Maintained by Lazr, Radeon, and UwUham",
+        color=discord.Color.green(),
+        thumbnail="https://i.imgur.com/AkOLH6q.png",
+        url="https://github.com/Lazr1026/Sans",
+        description="Sans, The discord bot that is kinda useful!"
+    )
+
+    await ctx.send(embed=embed)
+
 
 @bot.command()
 @commands.has_any_role('Owner', 'Staff', 'Admin', 'Sans Contributor')
@@ -82,45 +143,6 @@ async def profile(ctx, user: discord.User):
 @bot.command()
 async def ping(ctx):
     await ctx.send(f':ping_pong: Pong! Latency is {int(bot.latency * 1000)} ms!')
-    
-@bot.group()
-async def contributors(ctx):
-    '''Links contributors to the code'''
-    if ctx.invoked_subcommand is None:
-        await ctx.send('Which one? Current or old?')
-
-@contributors.command()
-async def old(ctx):
-    '''Lists the old Sans contributors'''
-    embed = discord.Embed(
-        title="List of old Sans contributors",
-        description=cleandoc("""
-            Lazr1026 - Creator and programmer
-            476MHz (Radeon) - Programmer
-            Uwuham - Not very much, he makes commits sometimes
-            Techmuse - PR'd useful shit
-            Gnome! - Cleaned everything up massively
-            ItsPizzaTime1501 - Helped with proper licensing
-            bleck9999 - Fixed Gnomes mistakes
-            Maretu (ray) - Fixed our terrible grammar
-            Meganium97 (Dire) - Idk, what are you asking me for?
-            Glazed_Belmont - Fixed the paths not being universal
-        """)
-    )
-    
-    await ctx.send(embed=embed)
-
-@contributors.command()
-async def current(ctx):
-    '''Lists currect Sans contributors'''
-    embed = discord.Embed(
-        title="List of current Sans contributors",
-        description=cleandoc("""
-            Meganium97 (Dire) - Current leading coder
-        """)
-    )
-    
-    await ctx.send(embed=embed)
 
 # General fun stuff
 
