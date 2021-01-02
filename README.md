@@ -14,3 +14,4 @@ Enjoy hosting Sans(-Remastered)!
 4. Put your output channel (just one)(from step 3) in place of the numbers in the line `bot.channel = bot.get_channel(770100020736688128)` in the file userphone-1.py.
 5. Put your input channel (from step 2) in place of the numbers in the line `if message.channel.id in (794603732947042337, ):` in userphone-1.py. Once again, remember to keep the comma at the end.
 6. Run both userphone.py files. You are now done!
+Kudos to [Gnome!](https://github.com/Gnome-py) for making the userphone code and helping me make it work.
