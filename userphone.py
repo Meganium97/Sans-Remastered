@@ -41,6 +41,8 @@ async def on_ready():
 
 @bot.event
 async def on_message(message):
+    if message.author.bot:
+        return
     if message.channel.id in (794603732947042337, ):
         
         webhooks = await bot.channel.webhooks()
