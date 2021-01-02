@@ -11,7 +11,6 @@ Enjoy hosting Sans(-Remastered)!
 1. Follow steps 1 and 2 from Instructions - selfhosting
 2. Put your input channel in place of the numbers in the line `bot.channel = bot.get_channel(770100020736688128)`
 3. Put your output channel(s) in place of the numbers in the line `if message.channel.id in (794603732947042337, ):`. Remember to keep the comma at the end.
-4. You can now copy and paste the userphone.py and token.json into another, separate foler.
-5. Put your output channel (just one)(from step 3) in place of the numbers in the line `bot.channel = bot.get_channel(770100020736688128)` in the new file.
-6. Put your input channel (from step 2) in place of the numbers in the line `if message.channel.id in (794603732947042337, ):` in the new file. Once again, remember to keep the comma at the end.
-7. Run both userphone.py files. You are now done!
+4. Put your output channel (just one)(from step 3) in place of the numbers in the line `bot.channel = bot.get_channel(770100020736688128)` in the file userphone-1.py.
+5. Put your input channel (from step 2) in place of the numbers in the line `if message.channel.id in (794603732947042337, ):` in userphone-1.py. Once again, remember to keep the comma at the end.
+6. Run both userphone.py files. You are now done!
