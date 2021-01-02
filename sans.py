@@ -89,10 +89,10 @@ async def sans(ctx):
     '''Links the github repo for Sans'''
     embed = make_embed(
         title="Sans",
-        author="Maintained by Lazr, Radeon, and UwUham",
+        author="Maintained by Meganium97",
         color=discord.Color.green(),
         thumbnail="https://i.imgur.com/AkOLH6q.png",
-        url="https://github.com/Lazr1026/Sans",
+        url="https://github.com/Meganium97/Sans-Remastered",
         description="Sans, The discord bot that is kinda useful!"
     )
 
