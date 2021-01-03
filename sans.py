@@ -51,6 +51,7 @@ async def current(ctx):
         title="List of current Sans contributors",
         description=cleandoc("""
             Meganium97 (Dire) - Current leading coder
+            Lazr - Removed some useless shit
         """)
     )
     
