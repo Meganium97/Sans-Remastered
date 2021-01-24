@@ -81,6 +81,11 @@ async def old(ctx):
 # now onto the actual commands
 
 @bot.command()
+async def test(ctx):
+    '''sends test, what did you expect?'''
+    await ctx.send('test')
+    
+@bot.command()
 async def snas(ctx):
     '''fortnite battle royale'''
     await ctx.send('https://tenor.com/view/sans-undertale-dance-gif-12730380')
