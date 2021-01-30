@@ -150,6 +150,22 @@ async def profile(ctx, user: discord.User):
 async def ping(ctx):
     await ctx.send(f':ping_pong: Pong! Latency is {int(bot.latency * 1000)} ms!')
 
+@bot.command()
+@commands.bot_has_permissions(read_messages=True, send_messages=True)
+async def suggest(self, ctx, *, suggestion):
+    "Suggests a new feature!"
+
+    if suggestion.lower().replace("*", "") == "suggestion":
+        return await ctx.send("Hey! You are meant to replace `*suggestion*` with your actual suggestion!")
+
+    if not await self.bot.blocked_users.check(ctx.message.author):
+        webhook = await ensure_webhook(self.bot.channels["suggestions"], "SUGGESTIONS")
+        files = [await attachment.to_file() for attachment in ctx.message.attachments]
+
+        await webhook.send(suggestion, username=str(ctx.author), avatar_url=ctx.author.avatar_url, files=files)
+
+    await ctx.send("Suggestion noted")
+
 # General fun stuff
 
 @bot.command()
