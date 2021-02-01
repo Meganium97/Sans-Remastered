@@ -158,7 +158,7 @@ async def bean(ctx, u: discord.Member):
     await ctx.send(f"{u.mention} Get Beaned!!!")
 
 @bot.command()
-async def suggest(ctx)
+async def suggest(ctx):
     '''Suggest a command!'''
     await ctx.send('https://forms.gle/boFJXoKG4HcnqvNj6')
 bot.run(token)
