@@ -147,6 +147,19 @@ async def profile(ctx, user: discord.User):
     await ctx.send(pfp)
     
 @bot.command()
+async def invite(ctx, invite):
+    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill)'''
+    invites = {
+        "ivan": "NM85JqJ",
+        "chill": "eTS6yym",
+        "analog": "7bXpJSh",
+        "homebrew": "C29hYvh"
+    }
+    try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
+    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+
+    
+@bot.command()
 async def ping(ctx):
     await ctx.send(f':ping_pong: Pong! Latency is {int(bot.latency * 1000)} ms!')
 
