@@ -153,7 +153,8 @@ async def invite(ctx, invite):
         "ivan": "NM85JqJ",
         "chill": "eTS6yym",
         "analog": "7bXpJSh",
-        "homebrew": "C29hYvh"
+        "homebrew": "C29hYvh",
+        "cave": "XHuCuuwsFN"
     }
     try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
     except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
