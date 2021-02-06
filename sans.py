@@ -157,7 +157,7 @@ async def invite(ctx, invite):
         "cave": "XHuCuuwsFN"
     }
     try:    await ctx.send(f"https://discord.gg/{invites[invite.lower()]}")
-    except: await ctx.send('Options are: ivan, homebrew, analog, chill.')
+    except: await ctx.send('Options are: ivan, homebrew, analog, chill, cave.')
 
     
 @bot.command()
@@ -175,4 +175,9 @@ async def bean(ctx, u: discord.Member):
 async def suggest(ctx):
     '''Suggest a command!'''
     await ctx.send('https://forms.gle/boFJXoKG4HcnqvNj6')
+    
+@bot.command()
+async def magnum(ctx):
+    '''gun'''
+    await ctx.send('https://www.halopedia.org/images/7/72/HReach-M6GMagnumPistol-LeftSide.png')
 bot.run(token)
