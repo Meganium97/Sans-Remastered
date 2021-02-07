@@ -148,7 +148,7 @@ async def profile(ctx, user: discord.User):
     
 @bot.command()
 async def invite(ctx, invite):
-    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill)'''
+    '''Shows the invites for various discord guilds (ivan, homebrew, analog, chill, cave)'''
     invites = {
         "ivan": "NM85JqJ",
         "chill": "eTS6yym",
