@@ -189,5 +189,5 @@ async def avocadosdemexico(ctx):
 bot.command()
 async def triangletraveler(ctx):
     ''''seriously, ninty?''
-    await ctx.send("Triangle traveler? Isn't that just octopath traveler?")
+    await ctx.send("Triangle traveler? Is that not just octopath traveler?")
 bot.run(token)
