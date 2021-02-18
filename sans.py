@@ -185,4 +185,9 @@ async def magnum(ctx):
 async def avocadosdemexico(ctx):
     '''uhh'''
     await ctx.send('https://2.bp.blogspot.com/_9SjeM2Vpk4s/S7LLv3gi08I/AAAAAAAAAUw/41IsMXokTvI/s1600/Avocado.jpg')
+    
+bot.command()
+async def triangletraveler(ctx):
+    ''''seriously, ninty?''
+    await ctx.send('Triangle traveler? Isn't that just octopath traveler?')
 bot.run(token)
