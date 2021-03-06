@@ -3,7 +3,7 @@ import subprocess
 from inspect import cleandoc
 from typing import Union
 import os
-import discord.py
+import discord
 from discord.ext import commands
 
 def make_embed(title=None, description=None, author=None, thumbnail=None, url=None, color=None, image=None, name=None) -> discord.Embed: 
