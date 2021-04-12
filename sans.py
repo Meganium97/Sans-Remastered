@@ -182,6 +182,11 @@ async def magnum(ctx):
     await ctx.send('https://www.halopedia.org/images/7/72/HReach-M6GMagnumPistol-LeftSide.png')
 
 @bot.command()
+async def magnum2(ctx):
+    '''devito moment'''
+    await ctx.send('dong')
+
+@bot.command()
 async def avocadosdemexico(ctx):
     '''uhh'''
     await ctx.send('https://2.bp.blogspot.com/_9SjeM2Vpk4s/S7LLv3gi08I/AAAAAAAAAUw/41IsMXokTvI/s1600/Avocado.jpg')
